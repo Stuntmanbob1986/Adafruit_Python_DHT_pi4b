@@ -94,6 +94,8 @@ def pi_version():
     # Match a line like 'Hardware   : BCM2709'
     match = re.search('^Hardware\s+:\s+(\w+)$', cpuinfo,
                       flags=re.MULTILINE | re.IGNORECASE)
+    print('match')
+    print(match)
     if not match:
         # Couldn't find the hardware, assume it isn't a pi.
         return None
